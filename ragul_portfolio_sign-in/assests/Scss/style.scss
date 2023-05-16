@@ -1,0 +1,73 @@
+@import "./abstract/variables";
+@import "./mixings/breakpoints";
+@import "./abstract/common";
+@import "./include/buttons";
+@import "./include/header";
+@import "./include/footer";
+
+.row {
+  .titlebackground {           
+    background-image: url("../../assests/image/Screenshot_20230405_234905.jpg");      //bg-image
+    @include media-min-lg { //Md-min-img
+      height: 100vh;
+      background-size: cover;
+    }
+    @include media-min-md { //Md-min-img
+      height: 100vh;
+      background-size: cover;
+    }
+    @include media-max-sm { //SM img
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+
+    }
+    @include media-max-md { //Md-max-img
+      background-size: cover;
+      background-repeat: no-repeat;
+      justify-content: center;
+      height: 100vh;
+
+    }
+    h4 {                 //bg-img-content
+      font-weight: 500;
+      letter-spacing: 1px;
+      line-height: 30px;
+      @include media-max-sm { //SM content
+        font-size: 0.9rem;       
+        letter-spacing: 1px;
+        padding: 1.5rem;
+        text-align: center;
+      }
+      @include media-max-md { //MD content
+        font-size: 1rem;
+        letter-spacing: 1px;
+        padding: 1.5rem;
+      }
+    }
+  }
+  form {               //form start
+    span {
+      color: $facebook-color;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    ::placeholder {  //placeholder
+      font-size: 13px;
+    }
+    .forgot {         //forgot
+      font-size: 13px;
+      color: $facebook-color;
+      font-weight: 500;
+    }
+    .required {      //required
+      font-size: 13.5px;
+      color: $required;
+      font-weight: 400;
+    }
+   
+  }
+}
+
+
+
